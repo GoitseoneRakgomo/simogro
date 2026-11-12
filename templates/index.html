@@ -1,0 +1,581 @@
+{% extends "base.html" %}
+
+{% block title %}
+    <title>Simogro Corp. | Private ownership. Long-term perspective.</title>
+{% endblock %}
+{% block description %}
+    <meta
+      content="Simogro Corp is a privately owned company with a long-term perspective across selected commercial interests, corporate oversight and strategic initiatives."
+      name="description"
+    />
+{% endblock %}
+
+{% block content %}
+<header class="mast">
+    <a aria-label="Simogro home" class="brand" href="#top">
+      <span class="brand-fallback" style="display: flex">
+        <img
+          alt=""
+          src="{{ url_for('static', filename='assets/simogro-crest-preview.png') }}"
+        />
+        <strong class="brand-word">SIMOGRO</strong>
+        <small class="brand-sub">AD ASTRA PER ASPERA SILENTIO ET IMPETU</small>
+      </span>
+    </a>
+    <div class="mast-right">
+      <button
+        aria-controls="primary-menu"
+        aria-expanded="false"
+        aria-label="Open navigation menu"
+        class="menu-toggle"
+        type="button"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="mast-menu" id="primary-menu">
+        <nav aria-label="Primary navigation" class="nav">
+        <a href="#company">The company</a>
+        <a href="#scope">Our focus</a>
+        <a href="#approach">Approach</a>
+        <a href="#governance">Governance</a>
+        </nav>
+        <a class="top-contact" href="#contact">
+          Contact <span aria-hidden="true">↗</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section
+      aria-label="Simogro corporate introduction"
+      class="hero"
+      id="top"
+    >
+      <video aria-hidden="true" autoplay class="hero-art" loop muted playsinline preload="auto">
+        <source
+          src="{{ url_for('static', filename='assets/herovid.mp4') }}"
+          type="video/mp4"
+        />
+      </video>
+      <div class="hero-wrap">
+        <div class="hero-copy">
+          <div class="label label-line">SIMOGRO</div>
+          <h1>
+            Private ownership.
+            <em>Long-term perspective.</em>
+          </h1>
+          <p class="body">
+            A privately owned company focused on investment in commercial<br>
+            enterprises, with an emphasis on considered decisions and continuity.
+          </p>
+          <br>
+          <a class="link-under" href="#contact">
+            Corporate enquiries <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+        <div class="hero-bottom">
+          <span>Privately owned</span>
+          <a class="discover" href="#company">
+            Discover the company <span aria-hidden="true">↓</span>
+          </a>
+        </div>
+      </div>
+      <div aria-hidden="true" class="wave">
+        <svg preserveaspectratio="none" viewbox="0 0 1500 90">
+          <path
+            d="M-35 67Q180 135 423 55T880 49T1400 55T1550 74"
+            fill="none"
+            stroke="#c5a768"
+            stroke-width="1"
+          ></path>
+          <path
+            d="M-35 75Q180 143 423 63T880 57T1400 63T1550 82"
+            fill="none"
+            stroke="#c5a768"
+            stroke-width=".7"
+          ></path>
+          <path
+            d="M-35 84Q180 152 423 72T880 66T1400 72T1550 91"
+            fill="none"
+            stroke="#c5a768"
+            stroke-width=".5"
+          ></path>
+        </svg>
+      </div>
+    </section>
+      
+      <!-- 01 / THE COMPANY (UPDATED LAYOUT) -->
+      <section class="section" id="company">
+        <div class="wrap company-grid split-media-grid split-media--right">
+          <div class="split-copy">
+         
+            <h2>
+              A defined focus
+              <br />
+              <em>An enduring outlook.</em>
+            </h2>
+
+            <div class="company-side">
+              <p class="body">
+                Investment in commercial enterprises is the focus of the company’s activity.
+<br>
+Within that scope, our approach centres on careful consideration and a long-term view. We recognise that each investment decision requires its own assessment, while the principles informing those decisions should remain consistent.
+              </p>
+              <p class="body">
+               For us, continuity means maintaining a clear purpose while allowing time for thoughtful evaluation. It is an outlook grounded in patience, discipline and attention to the responsibilities of ownership.
+              </p>
+
+              
+            </div>
+          </div>
+
+          <figure class="media media--company media--frame">
+            <img
+              class="media-img"
+              alt="Sunlit stone facade of a corporate office building"
+              loading="lazy"
+              src="{{ url_for('static', filename='assets/1.jfif') }}"
+            />
+            <figcaption>Simogro / Enterprise &amp; Oversight</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- PERSPECTIVE BAND (UPDATED FULL-WIDTH CONTRAST BAND) -->
+      <section
+        aria-label="Our perspective"
+        class="split-image"
+        style="--bg-image: url('{{ url_for('static', filename='assets/2.jfif') }}'); --bg-position: 58% 42%;"
+      >
+        <div class="wrap split-image-inner">
+          <div class="label label-line">A considered perspective</div>
+          <h2>
+            Quiet in approach.
+            <br />
+            <em>Enduring in outlook.</em>
+          </h2>
+        </div>
+        <span class="image-id">Simogro / Perspective</span>
+      </section>
+
+      <!-- 02 / SCOPE & INTERESTS (UPDATED EDITORIAL MATRIX LAYOUT) -->
+      <section class="section activities" id="scope">
+        <div class="wrap activities-split">
+          <div class="activities-sidebar">
+            <div class="label label-line">02 / A history of enterprise</div>
+            <h2>
+              Interests across
+          
+              <em>disciplines.</em>
+            </h2>
+            <p class="small">
+              Our historical activities have included private commercial
+              interests, technology, capital markets and related company
+              matters. The scope of individual interests may evolve over time.
+            </p>
+            <p class="scope-footnote">
+              The inclusion of an area reflects historical scope and does
+              not represent an offer of services or confirmation of an active
+              external mandate.
+            </p>
+          </div>
+
+          <div class="scope-matrix">
+            <article class="scope-card">
+              <div class="scope-card-head">
+                <div aria-hidden="true" class="scope-card-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 12h.01" />
+                    <path d="M16 6V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2" />
+                    <path d="M22 13a18.15 18.15 0 0 1-20 0" />
+                    <rect width="20" height="14" x="2" y="6" rx="2" />
+                  </svg>
+                </div>
+              </div>
+              <h3>
+                Private
+                <br />
+                enterprise
+              </h3>
+              <p>
+                Principal involvement in privately held businesses, strategic
+                initiatives and associated company interests.
+              </p>
+            </article>
+
+            <article class="scope-card">
+              <div class="scope-card-head">
+                <div aria-hidden="true" class="scope-card-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 16v5" />
+                    <path d="M16 14.639V21" />
+                    <path d="M20 10.656V21" />
+                    <path d="m22 3-8.646 8.646a.5.5 0 0 1-.708 0L9.354 8.354a.5.5 0 0 0-.707 0L2 15" />
+                    <path d="M4 18.463V21" />
+                    <path d="M8 14.656V21" />
+                  </svg>
+                </div>
+              </div>
+              <h3>
+                Capital &amp;
+                <br />
+                participations
+              </h3>
+              <p>
+                Historical activity in private equity, related-company
+                financing and proprietary investment matters.
+              </p>
+            </article>
+
+            <article class="scope-card">
+              <div class="scope-card-head">
+                <div aria-hidden="true" class="scope-card-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 20v2" />
+                    <path d="M12 2v2" />
+                    <path d="M17 20v2" />
+                    <path d="M17 2v2" />
+                    <path d="M2 12h2" />
+                    <path d="M2 17h2" />
+                    <path d="M2 7h2" />
+                    <path d="M20 12h2" />
+                    <path d="M20 17h2" />
+                    <path d="M20 7h2" />
+                    <path d="M7 20v2" />
+                    <path d="M7 2v2" />
+                    <rect x="4" y="4" width="16" height="16" rx="2" />
+                    <rect x="8" y="8" width="8" height="8" rx="1" />
+                  </svg>
+                </div>
+              </div>
+              <h3>
+                Technology
+                <br />
+                &amp; systems
+              </h3>
+              <p>
+                Experience in developing custom business software, information
+                systems and operational tools.
+              </p>
+            </article>
+
+            <article class="scope-card">
+              <div class="scope-card-head">
+                <div aria-hidden="true" class="scope-card-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <rect width="8" height="4" x="8" y="2" rx="1" ry="1" />
+                    <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" />
+                    <path d="m9 14 2 2 4-4" />
+                  </svg>
+                </div>
+              </div>
+              <h3>
+                Corporate
+                <br />
+                oversight
+              </h3>
+              <p>
+                Administration, coordination, project management and support
+                for selected private interests.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- 03 / ORIGIN & BACKGROUND (UPDATED SPLIT LAYOUT) -->
+      <section class="section origin" id="perspective">
+        <div class="wrap origin-grid split-media-grid split-media--left">
+          <div class="split-copy">
+            <div class="label label-line">03 / Our background</div>
+            <h2>
+              Different fields.
+              <br />
+              <em>One perspective.</em>
+            </h2>
+            <div class="origin-right">
+              <p>
+                Across its development, the company has worked with interests
+                relating to finance, security, mining, manufacturing and
+                information technology. Each demands a distinct operating
+                discipline; all benefit from sound judgement and a long-term
+                view.
+              </p>
+              <p>
+                Our public materials are deliberately limited. Specific
+                company relationships, holdings and arrangements are
+                considered privately where appropriate.
+              </p>
+              <div class="origin-tags">
+                <span>Finance</span>
+                <span>Technology</span>
+                <span>Enterprise</span>
+                <span>Continuity</span>
+              </div>
+            </div>
+          </div>
+
+          <figure class="media media--origin media--frame">
+            <img
+              class="media-img"
+              alt="A monochrome colonnade in a modern institutional building"
+              loading="lazy"
+              src="{{ url_for('static', filename='assets/eww.jfif') }}"
+            />
+            <figcaption>Simogro / Background</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- 04 / OUR APPROACH -->
+      <section class="section principles has-bg has-bg--left" id="approach">
+        <img
+          class="bg-media"
+          alt=""
+          loading="lazy"
+          src="{{ url_for('static', filename='assets/ere.jfif') }}"
+        />
+        <div class="wrap">
+          <div class="principles-heading">
+            <div class="label">04 / The Simogro approach</div>
+            <h2>
+              Built on judgement.
+              <em>Guided by principles.</em>
+            </h2>
+          </div>
+          <div class="principles-grid">
+            <article class="principle">
+              <div aria-hidden="true" class="principle-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" />
+                  <path d="m9 12 2 2 4-4" />
+                </svg>
+              </div>
+              <h3>Responsibility</h3>
+              <p>
+                Ownership carries responsibility. We place importance on understanding the implications of decisions and considering how they relate to the company’s interests over time.
+              </p>
+            </article>
+            <article class="principle">
+              <div aria-hidden="true" class="principle-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M3 7V5a2 2 0 0 1 2-2h2" />
+                  <path d="M17 3h2a2 2 0 0 1 2 2v2" />
+                  <path d="M21 17v2a2 2 0 0 1-2 2h-2" />
+                  <path d="M7 21H5a2 2 0 0 1-2-2v-2" />
+                  <circle cx="12" cy="12" r="3" />
+                  <path d="m16 16-1.9-1.9" />
+                </svg>
+              </div>
+              <h3>Discipline</h3>
+              <p>
+                A measured approach begins with careful assessment. We value clear reasoning, relevant information and the willingness to give decisions the consideration they require.
+              </p>
+            </article>
+            <article class="principle">
+              <div aria-hidden="true" class="principle-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8" />
+                  <path d="M21 3v5h-5" />
+                  <path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16" />
+                  <path d="M8 16H3v5" />
+                </svg>
+              </div>
+              <h3>Continuity</h3>
+              <p>
+                Our perspective extends beyond immediate outcomes. We favour consistency of purpose and an approach that remains thoughtful as circumstances develop.
+              </p>
+            </article>
+            <article class="principle">
+              <div aria-hidden="true" class="principle-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <rect width="8" height="4" x="8" y="2" rx="1" ry="1" />
+                  <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" />
+                  <path d="m9 14 2 2 4-4" />
+                </svg>
+              </div>
+              <h3>Accountability</h3>
+              <p>
+                Clear responsibility supports sound judgement. We place importance on decisions being understood, appropriately recorded and considered within the company’s internal framework.
+              </p>
+            </article>
+          </div>
+          <div class="approach-caption">Simogro / Our Approach</div>
+        </div>
+      </section>
+
+      <!-- 05 / GOVERNANCE & DISCLOSURE (UPDATED SPLIT LAYOUT) -->
+      <section class="section governance" id="governance">
+        <div class="wrap governance-grid split-media-grid split-media--right">
+          <div class="split-copy">
+            <div class="label label-line">05 / Governance &amp; disclosure</div>
+            <h2>
+              Private in practice.
+              <br />
+              <em>Clear in purpose.</em>
+            </h2>
+            <div class="governance-copy">
+              <p>
+                Simogro's internal approach emphasises defined responsibilities,
+                administrative discipline and appropriate record management.
+                Corporate matters are addressed within the applicable legal and
+                operational framework.
+              </p>
+              <p>
+                Information concerning associated entities, private
+                arrangements, counterparties and commercial interests is not
+                generally published. Relevant particulars may be provided to
+                properly authorised parties as part of legitimate due
+                diligence or regulatory processes.
+              </p>
+              <div class="notice">
+                
+This website offers a general introduction to Simogro. Company information is provided where required by applicable law and through appropriate channels for legitimate corporate enquiries.
+
+The content of this website does not constitute an offer or invitation to invest.
+
+              </div>
+            </div>
+          </div>
+
+          <figure class="media media--governance media--frame">
+            <img
+              class="media-img"
+              alt="A boardroom prepared for a corporate meeting"
+              loading="lazy"
+              src="{{ url_for('static', filename='assets/fdsf.jfif') }}"
+            />
+            <figcaption>Simogro / Governance </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- 06 / CONTACT SECTION (UPDATED DUAL-COLUMN CARD LAYOUT) -->
+      <section
+        class="section contact-section has-bg has-bg--left"
+        id="contact"
+        style="--focus: 58% 50%;"
+      >
+        <img
+          class="bg-media"
+          alt=""
+          loading="lazy"
+          src="{{ url_for('static', filename='assets/q.jfif') }}"
+        />
+        <div class="wrap contact-layout">
+          <div class="contact-header">
+            <div class="label label-line">06 / Direct correspondence</div>
+            <h2>
+              Corprate
+              <br />
+              <em>enquiries.</em>
+            </h2>
+          </div>
+
+          <div class="contact-card">
+            <p class="body">
+             
+For correspondence concerning Simogro and its company affairs, please contact us by email.
+
+To help us direct your enquiry appropriately, include your name, organisation where relevant, and a brief description of the matter you wish to discuss.
+            </p>
+            <div class="contact-action-wrapper">
+              <a
+                class="contact-link"
+                href="mailto:hello@simogro.com?subject=Corporate%20enquiry"
+              >
+                info@simogro.com <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+            <p class="contact-subnote">
+              Please do not include sensitive personal or financial information
+              in an initial email.
+            </p>
+          </div>
+        </div>
+      </section>
+  </main>
+
+  {% include "_footer.html" %}
+{% endblock %}
+
+{% block scripts %}
+    <script>
+      const menuToggle = document.querySelector(".menu-toggle");
+      const primaryMenu = document.querySelector("#primary-menu");
+
+      function closePrimaryMenu() {
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.setAttribute("aria-label", "Open navigation menu");
+        primaryMenu.classList.remove("is-open");
+      }
+
+      menuToggle.addEventListener("click", () => {
+        const isOpen = menuToggle.getAttribute("aria-expanded") === "true";
+        menuToggle.setAttribute("aria-expanded", String(!isOpen));
+        menuToggle.setAttribute(
+          "aria-label",
+          isOpen ? "Open navigation menu" : "Close navigation menu",
+        );
+        primaryMenu.classList.toggle("is-open", !isOpen);
+      });
+
+      primaryMenu.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", closePrimaryMenu);
+      });
+
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape" && menuToggle.getAttribute("aria-expanded") === "true") {
+          closePrimaryMenu();
+          menuToggle.focus();
+        }
+      });
+
+      /* Missing picture? Show the quiet placeholder instead of a broken icon. */
+      document.querySelectorAll("img.media-img,img.bg-media").forEach((img) => {
+        const fail = () => {
+          const figure = img.closest(".media");
+          (figure || img).classList.add("is-empty");
+        };
+        img.addEventListener("error", fail);
+        if (img.complete && img.naturalWidth === 0) fail();
+      });
+
+      const revealTargets = document.querySelectorAll(
+        "main h1, main h2, main h3, main p, main .quiet-details, " +
+          "main .origin-tags, main .scope-card, main .principle, main .notice, " +
+          "main .media, .brand, .mast-right, .hero-bottom, .image-id, " +
+          ".footer-main, .footer-meta, " +
+          ".contact-card, .activities-sidebar",
+      );
+
+      if (
+        "IntersectionObserver" in window &&
+        !window.matchMedia("(prefers-reduced-motion: reduce)").matches
+      ) {
+        const revealObserver = new IntersectionObserver(
+          (entries, observer) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("is-visible");
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.12 },
+        );
+
+        revealTargets.forEach((target) => {
+          target.classList.add("reveal");
+          revealObserver.observe(target);
+        });
+      } else {
+        revealTargets.forEach((target) => {
+          target.classList.add("is-visible");
+        });
+      }
+    </script>
+{% endblock %}

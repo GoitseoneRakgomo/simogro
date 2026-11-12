@@ -1,0 +1,97 @@
+{% extends "base.html" %}
+
+{% block title %}
+  <title>{{ title }} | Simogro Corp.</title>
+{% endblock %}
+
+{% block description %}
+  <meta content="{{ summary }}" name="description" />
+{% endblock %}
+
+{% block content %}
+  <header class="mast policy-mast">
+    <a aria-label="Simogro home" class="brand" href="{{ url_for('home') }}#top">
+      <span class="brand-fallback" style="display: flex">
+        <img
+          alt=""
+          src="{{ url_for('static', filename='assets/simogro-crest-preview.png') }}"
+        />
+        <strong class="brand-word">SIMOGRO</strong>
+        <small class="brand-sub">AD ASTRA PER ASPERA SILENTIO ET IMPETU</small>
+      </span>
+    </a>
+    <a class="top-contact" href="{{ url_for('home') }}">Back to home</a>
+  </header>
+
+  <main>
+    <section aria-label="{{ title }}" class="hero policy-hero" id="top">
+      <img
+        alt=""
+        class="hero-art"
+        fetchpriority="high"
+        src="{{ url_for('static', filename='assets/architecture.webp') }}"
+      />
+      <div class="hero-wrap">
+        <div class="hero-copy">
+          <div class="label label-line">SIMOGRO / WEBSITE INFORMATION</div>
+          <h1>
+            {{ heading_first }}
+            <em>{{ heading_second }}</em>
+          </h1>
+          <p class="body">{{ summary }}</p>
+          <a class="link-under" href="#policy-content">
+            Read {{ title }}
+          </a>
+        </div>
+        <div class="hero-bottom">
+          <span>Privately owned</span>
+          <a class="discover" href="#policy-content">Continue ↓</a>
+        </div>
+      </div>
+    </section>
+
+    <section aria-label="{{ title }} details" class="section policy-content" id="policy-content">
+      <div class="wrap">
+        <div class="policy-copy">
+          {% for section in sections %}
+            <article>
+              <h2>{{ section.heading }}</h2>
+              {% for paragraph in section.paragraphs %}
+                <p>{{ paragraph }}</p>
+              {% endfor %}
+            </article>
+          {% endfor %}
+
+          {% if cookie_settings %}
+            <div class="cookie-settings-controls">
+              <h2>Update your preference</h2>
+              <p>
+                Your selection is saved in this browser and can be changed here
+                at any time.
+              </p>
+              <div class="cookie-consent__actions">
+                <button
+                  class="cookie-consent__button cookie-consent__button--quiet"
+                  data-consent="reject"
+                  type="button"
+                >
+                  Reject optional
+                </button>
+                <button
+                  class="cookie-consent__button"
+                  data-consent="accept"
+                  type="button"
+                >
+                  Accept optional
+                </button>
+              </div>
+              <p aria-live="polite" class="cookie-settings-status" id="cookie-settings-status"></p>
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    </section>
+  </main>
+
+  {% include "_footer.html" %}
+{% endblock %}

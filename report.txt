@@ -1,0 +1,56 @@
+SIMOGRO WEBSITE TASK REPORT
+Date: 2026-11-12
+
+COMPLETED WORK
+
+1. Card interactions
+- Added a lift, gold border glow, and brighter card text on hover for the
+  scope cards.
+- Added subtle hover styling to the approach principle cards and icons.
+
+2. Typography and branding
+- Removed en and em dashes from the page templates.
+- Changed the favicon to use the Simogro crest image.
+
+3. Approach section
+- Replaced the section copy with the supplied "Built on judgement. Guided by
+  principles." wording and four principles: Responsibility, Discipline,
+  Continuity, and Accountability.
+- Added Lucide line icons for each principle.
+- Removed numbered labels from the principle cards.
+
+4. Scope cards
+- Added Lucide line icons for enterprise, capital, technology, and
+  administration.
+- Removed the card category labels and positioned the icons at the upper-left.
+
+5. Policy pages
+- Removed the privacy and terms accordions from the home page.
+- Added separate /privacy, /terms, and /cookie-settings pages with a hero,
+  typography, and alignment consistent with the home page.
+- Added shared footer navigation for all pages.
+- Added controls on the cookie-settings page to accept or reject optional
+  cookies. Choices are saved in browser local storage.
+- Updated the README to document the pages and cookie preference behavior.
+
+6. Hero and navigation styling
+- Added the herovid.mp4 video as the home page hero background.
+- Set the policy page hero backgrounds to the architecture.webp image.
+- Positioned the navigation over the hero with a 90%-transparent dark
+  background.
+- Removed the grayscale effect from hero media while retaining contrast and
+  brightness adjustments for text readability.
+- Removed the decorative horizontal rules before section labels.
+
+VALIDATION
+- Python syntax check passed for app.py.
+- Flask test client verified that the home, privacy, terms, and cookie
+  settings routes render successfully.
+- Verified the home hero uses herovid.mp4 and policy pages use
+  architecture.webp.
+- Verified all four approach icons and all four scope icons render.
+- Verified the removed policy accordions and card labels are absent.
+
+PUBLICATION NOTE
+- Existing privacy and terms content remains preliminary and should be
+  reviewed by legal counsel before publication.
