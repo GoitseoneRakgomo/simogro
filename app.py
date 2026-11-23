@@ -7,6 +7,19 @@ def create_app():
     @app.get("/")
     def home():
         return render_template("index.html")
+    
+    @app.route("/privacy-policy")
+    def privacy_policy():
+        return render_template("privacy_policy.html")
+    
+    @app.route("/terms-of-use")
+    def terms_of_use():
+        return render_template("terms_of_use.html")
+
+
+    @app.route("/cookie-policy")
+    def cookie_policy():
+        return render_template("cookie_policy.html")
 
     @app.get("/privacy")
     def privacy():
@@ -57,7 +70,7 @@ def create_app():
                 },
             ],
         )
-
+    
     @app.get("/cookie-settings")
     def cookie_settings():
         return render_template(
