@@ -61,7 +61,7 @@ h1,h2,h3{font-family:var(--serif);font-size:var(--heading-size)!important;line-h
   .hero-wrap{padding:18px 22px 24px}
   .mast{flex-wrap:wrap;align-items:center;gap:12px;padding-bottom:14px}
   .brand{width:90px}
-  .brand-fallback img{height:42px;width:42px}
+  .brand-fallback img{height:82px;width:82px}
   .brand-word{font-size:19px}
   .brand-sub{font-size:3.7px;margin-top:4px}
   .mast-right{display:contents}
@@ -1248,4 +1248,61 @@ button,
   .contact-card {
     padding: 24px 18px;
   }
+}
+/* =====================================================================
+   2X LOGO SIZE OVERRIDE
+   ===================================================================== */
+.brand {
+  width: 240px;
+}
+
+.brand-fallback img {
+  height: 100px;
+  width: 100px;
+  object-fit: contain;
+}
+
+@media (max-width: 720px) {
+  .brand {
+    width: 180px;
+  }
+
+  .brand-fallback img {
+    height: 84px;
+    width: 84px;
+  }
+}
+/* =====================================================================
+   ALIGN LOGO TO THE LEFT
+   ===================================================================== */
+.brand {
+  width: auto;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.brand-fallback {
+  align-items: flex-start;
+}
+
+/* Optional: reduce the left gutter on the header so it sits closer to the viewport edge */
+.mast {
+  padding-left: clamp(16px, 2.5vw, 36px);
+}
+
+/* =====================================================================
+   ALIGN NAV LOGO WITH HERO TEXT ON THE LEFT
+   ===================================================================== */
+.mast {
+  padding-inline: var(--page-gutter);
+}
+
+.brand {
+  width: auto;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.brand-fallback {
+  align-items: flex-start;
 }

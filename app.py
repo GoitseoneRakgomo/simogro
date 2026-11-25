@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 
 
 def create_app():
@@ -16,10 +16,14 @@ def create_app():
     def terms_of_use():
         return render_template("terms_of_use.html")
 
-
     @app.route("/cookie-policy")
     def cookie_policy():
         return render_template("cookie_policy.html")
+
+    @app.get("/thank-you")
+    def thank_you():
+        sender_name = request.args.get("name", "").strip()
+        return render_template("thank_you.html", sender_name=sender_name)
 
     @app.get("/privacy")
     def privacy():
