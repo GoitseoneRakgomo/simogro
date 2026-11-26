@@ -1306,3 +1306,107 @@ button,
 .brand-fallback {
   align-items: flex-start;
 }
+/* =====================================================================
+   BRAND ICONS (public/static/icons/web/*.webp)
+   ===================================================================== */
+
+/* Section-level icon sitting above each section heading */
+.section-icon {
+  display: block;
+  width: clamp(68px, 6.5vw, 96px);
+  height: clamp(68px, 6.5vw, 96px);
+  margin: 0 0 26px;
+}
+.section-icon-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Centred headings: Our focus + Approach */
+.activities-sidebar .section-icon,
+.principles-heading .section-icon {
+  margin-inline: auto;
+}
+
+/* Principle cards: let the artwork stand on its own (no ring behind it) */
+.principles .principle-icon {
+  width: 64px;
+  height: 64px;
+  margin-bottom: 22px;
+  border: 0;
+  border-radius: 0;
+  background: none;
+}
+.principle-icon .principle-icon-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.principles .principle:hover .principle-icon {
+  border: 0;
+  background: none;
+  transform: scale(1.08);
+}
+
+@media (max-width: 720px) {
+  .section-icon { width: 64px; height: 64px; margin-bottom: 20px; }
+  .principles .principle-icon { width: 54px; height: 54px; margin-bottom: 18px; }
+}
+
+/* =====================================================================
+   BRAND ICONS (public/static/icons/web/*.webp)
+   ===================================================================== */
+
+/* Section-level icon above a section heading */
+.section-icon {
+  display: block;
+  width: clamp(68px, 6.5vw, 96px);
+  height: clamp(68px, 6.5vw, 96px);
+  margin: 0 0 26px;
+}
+.section-icon-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Centred headings (Our focus sidebar) */
+.activities-sidebar .section-icon,
+.principles-heading .section-icon {
+  margin-inline: auto;
+}
+
+/* Focus cards: brand icon + centred heading */
+.scope-matrix .scope-card-head {
+  justify-content: center;
+}
+.scope-matrix .scope-card-icon {
+  width: 64px;
+  height: 64px;
+  flex: 0 0 64px;
+  border: 0;
+  border-radius: 0;
+  background: none;
+}
+.scope-card-icon .scope-card-icon-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.scope-matrix .scope-card:hover .scope-card-icon {
+  border: 0;
+  background: none;
+  transform: scale(1.08);
+}
+.scope-matrix .scope-card h3 {
+  text-align: center;
+}
+
+@media (max-width: 720px) {
+  .section-icon { width: 64px; height: 64px; margin-bottom: 20px; }
+}
