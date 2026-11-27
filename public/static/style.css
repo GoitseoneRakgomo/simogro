@@ -1912,11 +1912,7 @@ main .split-image .label::before {
   margin: 0 auto;
   text-align: center;
 }
-/* Banner photo: original colours (no black and white) */
-.origin-banner__bg {
-  filter: none;
-  opacity: 0.55; /* keeps the text readable over the colour photo */
-}
+
 /* Policy pages: body text spans the full content width
    (logo edge on the left, Continue / Back button edge on the right) */
 .policy-content .policy-copy,
@@ -1935,4 +1931,111 @@ main .split-image .label::before {
 .policy-content .policy-copy p,
 .policy-content .policy-copy li {
   text-align: left;
+}
+/* =====================================================================
+   EYEBROWS WHITE  /  SECTION HEADINGS GOLD
+   ===================================================================== */
+
+/* Eyebrows (01 / The company, 02 / Our focus, ...) */
+main .section .label,
+main .split-image .label,
+main .section-heading .label,
+main .activities-sidebar .label,
+main .principles-heading .label,
+main .contact-header .label {
+  color: #ffffff !important;
+}
+
+/* Section headings: whole heading gold, including the part that was white */
+.section-heading h2,
+.section-heading h2 em,
+.activities-sidebar h2,
+.activities-sidebar h2 em,
+.principles-heading h2,
+.principles-heading h2 em,
+.contact-header h2,
+.contact-header h2 em,
+.split-image h2,
+.split-image h2 em {
+  color: var(--gold) !important;
+}
+/* =====================================================================
+   POLICY PAGES: headings match the index section headings
+   same size, all caps, gold, one line
+   ===================================================================== */
+.policy-hero h1,
+.policy-hero h1 em,
+.policy-copy h2 {
+  font-family: var(--serif, inherit);
+  font-size: var(--section-heading-size) !important;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: var(--gold) !important;
+}
+
+/* Hero title ("Privacy" / "Policy.") on one line, not stacked */
+.policy-hero h1 {
+  white-space: nowrap;
+}
+.policy-hero h1 em {
+  display: inline;
+}
+
+@media (max-width: 640px) {
+  .policy-hero h1,
+  .policy-hero h1 em,
+  .policy-copy h2 {
+    font-size: clamp(1.8rem, 8.4vw, 2.4rem) !important;
+  }
+  .policy-hero h1 {
+    white-space: normal;
+  }
+}
+/* Hero: tighter gap between the heading and the paragraph */
+.hero h1 {
+  margin: 28px 0 14px;
+}
+.hero .hero-copy > p.body {
+  margin-top: 0;
+}
+
+@media (max-width: 720px) {
+  .hero h1 {
+    margin: 24px 0 12px;
+  }
+}
+
+/* =====================================================================
+   POLICY PAGES: hero height + navigation bar match the index page
+   ===================================================================== */
+
+/* Same solid, fixed navigation bar as the index */
+.policy-mast {
+  position: fixed;
+  background: rgba(11, 11, 10, 0.94);
+}
+
+/* Same full-height hero as the index */
+.policy-hero,
+.policy-hero .hero-wrap {
+  min-height: 100svh;
+}
+
+.policy-hero .hero-copy {
+  padding-top: clamp(120px, 20vh, 240px);
+  padding-bottom: clamp(110px, 12vh, 150px);
+}
+
+@media (max-width: 720px) {
+  .policy-hero,
+  .policy-hero .hero-wrap {
+    min-height: 100svh;
+  }
+  .policy-hero .hero-copy {
+    padding-top: 110px;
+    padding-bottom: 110px;
+  }
 }
