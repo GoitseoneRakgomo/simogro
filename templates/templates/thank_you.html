@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+
+{% block title %}
+  <title>Enquiry Received | Simogro FZCO</title>
+{% endblock %}
+
+{% block description %}
+  <meta
+    content="Thank you for your corporate correspondence with Simogro FZCO."
+    name="description"
+  />
+{% endblock %}
+
+{% block content %}
+  <header class="mast policy-mast">
+    <a aria-label="Simogro home" class="brand" href="{{ url_for('home') }}#top">
+      <span class="brand-fallback" style="display: flex">
+        <img
+          alt=""
+          src="{{ url_for('static', filename='assets/simogro-crest-preview.png') }}"
+        />
+        <strong class="brand-word">SIMOGRO</strong>
+        <small class="brand-sub">AD ASTRA PER ASPERA SILENTIO ET IMPETU</small>
+      </span>
+    </a>
+    <a class="top-contact" href="{{ url_for('home') }}">Back to home</a>
+  </header>
+
+  <main>
+    <section
+      aria-label="Enquiry confirmation"
+      class="hero policy-hero"
+      id="top"
+      style="min-height: calc(100svh - 140px); display: flex; align-items: center;"
+    >
+      <img
+        alt=""
+        class="hero-art"
+        fetchpriority="high"
+        src="{{ url_for('static', filename='assets/architecture.webp') }}"
+      />
+      <div class="hero-wrap" style="min-height: auto; width: 100%;">
+        <div class="hero-copy" style="max-width: 780px;">
+          <div class="label label-line">06 / DIRECT CORRESPONDENCE</div>
+          <h1>
+            Enquiry
+            <em>received.</em>
+          </h1>
+          <p class="body">
+            Thank you{% if sender_name %}, {{ sender_name }}{% endif %}. Your
+            correspondence has been recorded and directed to the appropriate
+            desk at Simogro FZCO for review.
+          </p>
+          <p class="body" style="margin-top: 18px; color: var(--muted);">
+            Should your matter require a response, a representative will
+            contact you using the details provided. For urgent administrative
+            matters, you may also write directly to
+            <a
+              href="mailto:info@simogro.com"
+              style="color: var(--gold-light); text-decoration: underline;"
+            >info@simogro.com</a>.
+          </p>
+          <div style="margin-top: 40px; display: flex; flex-wrap: wrap; gap: 16px;">
+            <a class="link-under" href="{{ url_for('home') }}">
+              Return to homepage
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  {% include "_footer.html" %}
+{% endblock %}

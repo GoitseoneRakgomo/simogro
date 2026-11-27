@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      content="width=device-width, initial-scale=1"
+      name="viewport"
+    />
+    <meta content="#0b0b0a" name="theme-color" />
+    <meta content="dark" name="color-scheme" />
+    {% block description %}
+    <meta
+      content="Simogro Corp is a privately owned company with a long-term perspective across selected commercial interests, corporate oversight and strategic initiatives."
+      name="description"
+    />
+    {% endblock %}
+    {% block title %}
+    <title>Simogro Corp. | Private ownership. Long-term perspective.</title>
+    {% endblock %}
+    <link
+      href="{{ url_for('static', filename='assets/simogro-crest-preview.png') }}"
+      rel="icon"
+      type="image/png"
+    />
+    <link
+      href="{{ url_for('static', filename='style.css') }}"
+      rel="stylesheet"
+    />
+    <script>
+      document.documentElement.classList.add("js");
+    </script>
+  </head>
+  <body>
+    <div
+      class="loading-screen"
+      role="status"
+      aria-live="polite"
+      aria-label="Loading Simogro"
+    >
+      <div class="loading-screen__content">
+        <img
+          alt=""
+          class="loading-screen__logo"
+          src="{{ url_for('static', filename='assets/logo-primary.png') }}"
+        />
+        <span class="loading-screen__message">Preparing your experience</span>
+      </div>
+    </div>
+    {% block content %}{% endblock %}
+    <section
+      aria-labelledby="cookie-consent-title"
+      aria-describedby="cookie-consent-description"
+      class="cookie-consent"
+      hidden
+      id="cookie-consent"
+    >
+      <div class="cookie-consent__copy">
+        <h2 id="cookie-consent-title">Your privacy matters</h2>
+        <p id="cookie-consent-description">
+          This site currently uses no analytics or advertising cookies. Your
+          choice is saved in this browser and applies if optional cookies are
+          introduced.
+          <a href="{{ url_for('privacy') }}">Read our privacy notice</a>.
+        </p>
+        <p class="cookie-consent__status" aria-live="polite"></p>
+      </div>
+      <div class="cookie-consent__actions">
+        <button
+          class="cookie-consent__button cookie-consent__button--quiet"
+          type="button"
+          data-consent="reject"
+        >
+          Reject optional
+        </button>
+        <button
+          class="cookie-consent__button"
+          type="button"
+          data-consent="accept"
+        >
+          Accept all
+        </button>
+      </div>
+    </section>
+    {% block scripts %}{% endblock %}
+    <script>
+      document.querySelectorAll("[data-year]").forEach((element) => {
+        element.textContent = new Date().getFullYear();
+      });
+
+      const loadingScreen = document.querySelector(".loading-screen");
+      const loadingStarted = performance.now();
+      let loadingFallback;
+      let loadingFinished = false;
+
+      function finishLoading() {
+        if (!loadingScreen || loadingFinished) {
+          return;
+        }
+
+        loadingFinished = true;
+        window.clearTimeout(loadingFallback);
+        const remainingTime = Math.max(0, 400 - (performance.now() - loadingStarted));
+        window.setTimeout(() => {
+          document.documentElement.classList.add("is-loaded");
+          window.setTimeout(() => loadingScreen.remove(), 500);
+        }, remainingTime);
+      }
+
+      if (document.readyState === "complete") {
+        finishLoading();
+      } else {
+        window.addEventListener("load", finishLoading, { once: true });
+        loadingFallback = window.setTimeout(finishLoading, 5000);
+      }
+
+      const consentBanner = document.querySelector("#cookie-consent");
+      const consentStatus = consentBanner.querySelector(".cookie-consent__status");
+      const settingsStatus = document.querySelector("#cookie-settings-status");
+      const consentKey = "simogro-cookie-consent-v1";
+
+      function showConsentBanner() {
+        consentBanner.hidden = false;
+      }
+
+      try {
+        const savedConsent = window.localStorage.getItem(consentKey);
+        if (savedConsent !== "accepted" && savedConsent !== "rejected") {
+          showConsentBanner();
+        }
+      } catch (error) {
+        console.warn("Could not read the saved cookie preference.", error);
+        showConsentBanner();
+        consentStatus.textContent =
+          "Your browser could not load a saved preference. Choose an option to continue.";
+      }
+
+      document.querySelectorAll("[data-consent]").forEach((button) => {
+        button.addEventListener("click", () => {
+          const value =
+            button.dataset.consent === "accept" ? "accepted" : "rejected";
+
+          try {
+            window.localStorage.setItem(consentKey, value);
+            consentBanner.hidden = true;
+            consentStatus.textContent = "";
+            if (settingsStatus) {
+              settingsStatus.textContent =
+                value === "accepted"
+                  ? "Your preference to accept optional cookies has been saved in this browser."
+                  : "Your preference to reject optional cookies has been saved in this browser.";
+            }
+          } catch (error) {
+            console.warn("Could not save the cookie preference.", error);
+            const message =
+              "Your choice could not be saved. Check your browser storage settings and try again.";
+            consentStatus.textContent = message;
+            if (settingsStatus) {
+              settingsStatus.textContent = message;
+            }
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
