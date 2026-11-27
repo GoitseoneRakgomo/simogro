@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block title %}
-    <title>Simogro Corp. | Private ownership. Long-term perspective.</title>
+    <title>Simogro Corp. | Long-term perspective.</title>
 {% endblock %}
 {% block description %}
     <meta
@@ -60,7 +60,7 @@
       </video>
       <div class="hero-wrap">
         <div class="hero-copy">
-          <div class="label label-line">SIMOGRO</div>
+          
           <h1>
             LONG-TERM PERSPECTIVE.<br>
             SUSTAINABLE STRATEGY.
@@ -152,7 +152,6 @@ For us, continuity means maintaining a clear purpose while allowing time for tho
         style="--bg-image: url('{{ url_for('static', filename='assets/photo-2.jpg') }}'); --bg-position: 58% 42%;"
       >
         <div class="wrap split-image-inner">
-          <div class="label label-line">A considered perspective</div>
           <h2>
             Quiet in approach.
             <br />
@@ -187,11 +186,11 @@ For us, continuity means maintaining a clear purpose while allowing time for tho
               <h3>
                 Commercial
                 <br />
-                enterprises
+                enterprise
               </h3>
               <p>
-                Principal involvement in commercial enterprises, strategic
-                initiatives and associated company interests.
+                Principal involvement in commercial enterprises, strategic initiatives and associated company interests.
+
               </p>
             </article>
 
@@ -207,8 +206,8 @@ For us, continuity means maintaining a clear purpose while allowing time for tho
                 participations
               </h3>
               <p>
-                Historical activity in company-related financing and proprietary
-                investment matters.
+                Historical activity in related company financing and proprietary investments.
+
               </p>
             </article>
 
@@ -224,8 +223,7 @@ For us, continuity means maintaining a clear purpose while allowing time for tho
                 &amp; systems
               </h3>
               <p>
-                Experience in developing custom information systems and
-                operational tools.
+                Experience in developing custom information systems and operational tools.
               </p>
             </article>
 
@@ -241,8 +239,7 @@ For us, continuity means maintaining a clear purpose while allowing time for tho
                 oversight
               </h3>
               <p>
-                Administration, coordination, project management and support
-                for selected business interests.
+                Administration, coordination, project management and support for businesses 
               </p>
             </article>
           </div>
@@ -250,52 +247,35 @@ For us, continuity means maintaining a clear purpose while allowing time for tho
       </section>
 
   
-       <!-- 03 / ORIGIN & BACKGROUND (UPDATED SPLIT LAYOUT) -->
-      <section class="section origin" id="perspective">
-          <div class="wrap activities-split">
-          <div class="activities-sidebar">
-            
-            <div class="label label-line">Our background</div>
-            <h2>
-              Different fields.
-            
-              <em>One perspective.</em>
-            </h2>
-           
-          </div>
-          <br>
-          
-        <div class="wrap origin-grid split-media-grid split-media--left">
-          <div class="split-copy">
-          
-           
-            <div class="origin-right">
-              <p>
-                Across its development, the company has worked with interests
-                relating to finance, security, mining, manufacturing and
-                information technology. Each demands a distinct operating
-                discipline; all benefit from sound judgement and a long-term
-                view.
-              </p>
-              <p>
-                Our public materials are deliberately limited. Specific
-                company relationships, holdings and arrangements are
-                considered privately where appropriate.
-              </p>
-              
-            </div>
-          </div>
+ <!-- 03 / ORIGIN & BACKGROUND (PREMIUM BANNER) -->
+<section class="section origin-banner" id="perspective">
+  <img
+    class="origin-banner__bg"
+    alt="A monochrome colonnade in a modern institutional building"
+    loading="lazy"
+    src="{{ url_for('static', filename='assets/photo-1.jpg') }}"
+  />
 
-          <figure class="media media--origin media--frame">
-            <img
-              class="media-img"
-              alt="A monochrome colonnade in a modern institutional building"
-              loading="lazy"
-              src="{{ url_for('static', filename='assets/eww.jpg') }}"
-            />
-          </figure>
-        </div>
-      </section>
+  <div class="wrap origin-banner__inner">
+    <div class="section-heading">
+      <h2>
+        Different fields.
+        <em>One perspective.</em>
+      </h2>
+    </div>
+
+    <div aria-hidden="true" class="origin-banner__rule"><span></span></div>
+
+    <div class="origin-banner__cols">
+      <p class="origin-banner__text origin-banner__text--single">
+  Each industry and venture demands a distinct operating
+  discipline; all benefit from sound judgement and a long-term view.
+  Measured in approach with strong corporate governance and the
+  development of systems to support each venture.
+</p>
+    </div>
+  </div>
+</section>
 
       <!-- 03 / OUR APPROACH -->
       <section class="section principles has-bg has-bg--left" id="approach">
@@ -303,7 +283,7 @@ For us, continuity means maintaining a clear purpose while allowing time for tho
           class="bg-media"
           alt=""
           loading="lazy"
-          src="{{ url_for('static', filename='assets/ere.jpg') }}"
+          src="{{ url_for('static', filename='assets/') }}"
         />
         <div class="wrap">
           <div class="principles-heading">
@@ -359,8 +339,7 @@ For us, continuity means maintaining a clear purpose while allowing time for tho
       <section class="section governance" id="governance">
         <div class="wrap">
           <div class="section-heading">
-           
-            <div class="label label-line">Governance &amp; disclosure</div>
+           <div class="label label-line">Governance</div>
             <h2>
               Private in practice.
               <br />
