@@ -12,18 +12,25 @@
 {% endblock %}
 
 {% block content %}
- <header class="mast policy-mast">
-    <a aria-label="Simogro home" class="brand" href="{{ url_for('home') }}#top">
-      <span class="brand-fallback" style="display: flex">
-        <img
-          alt=""
-          src="{{ url_for('static', filename='assets/logo-primary.png') }}"
-        />
-       
-      </span>
-    </a>
+<header class="mast policy-mast">
+  <a aria-label="Simogro home" class="brand" href="{{ url_for('home') }}#top">
+    <span class="brand-fallback" style="display: flex">
+      <img
+        alt=""
+        src="{{ url_for('static', filename='assets/logo-primary.png') }}"
+      />
+    </span>
+  </a>
+  <div class="mast-right">
+    <nav aria-label="Primary navigation" class="nav">
+      <a href="{{ url_for('home') }}#company">The company</a>
+      <a href="{{ url_for('home') }}#scope">Our focus</a>
+      <a href="{{ url_for('home') }}#approach">Our approach</a>
+      <a href="{{ url_for('home') }}#governance">Governance</a>
+    </nav>
     <a class="top-contact" href="{{ url_for('home') }}">Back to home</a>
-  </header>
+  </div>
+</header>
 
 
   <main>
@@ -49,7 +56,6 @@
           
         </div>
         <div class="hero-bottom">
-          <span>Privately owned</span>
           <a class="discover" href="#policy-content">Continue ↓</a>
         </div>
       </div>
