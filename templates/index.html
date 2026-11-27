@@ -107,15 +107,19 @@
       
       <!-- 01 / THE COMPANY (UPDATED LAYOUT) -->
       <section class="section" id="company">
-        <div class="wrap company-grid split-media-grid split-media--right">
-          <div class="split-copy">
-          
+        <div class="wrap">
+          <div class="section-heading">
+            
             <h2>
               A CONSISTENT 
               <br />
               <em>MEASURED APPROACH.
 </em>
             </h2>
+          </div>
+
+          <div class="company-grid split-media-grid split-media--right">
+          <div class="split-copy">
 
             <div class="company-side">
               <p class="body">
@@ -137,6 +141,7 @@ For us, continuity means maintaining a clear purpose while allowing time for tho
               src="{{ url_for('static', filename='assets/photo-1.jpg') }}"
             />
           </figure>
+          </div>
         </div>
       </section>
 
@@ -156,95 +161,95 @@ For us, continuity means maintaining a clear purpose while allowing time for tho
         </div>
       </section>
 
-<!-- 02 / SCOPE & INTERESTS -->
-<section class="section activities" id="scope">
-  <div class="wrap activities-split">
-    <div class="activities-sidebar">
-     
-      <div class="label label-line">02 / Our focus</div>
-      <h2>
-        Interests across
-        <em>disciplines.</em>
-      </h2>
-      <p class="small">
-        Our interests span a diverse range of sectors and disciplines,
-        guided by a consistent, long-term perspective.
-      </p>
-    </div>
+   <!-- 02 / SCOPE & INTERESTS (UPDATED EDITORIAL MATRIX LAYOUT) -->
+      <section class="section activities" id="scope">
+        <div class="wrap activities-split">
+          <div class="activities-sidebar">
+            
+            <div class="label label-line">02 / Our focus</div>
+            <h2>
+              Interests across
+              <em>disciplines.</em>
+            </h2>
+            <p class="small">
+              Our interests span a diverse range of sectors and disciplines,
+              guided by a consistent, long-term perspective.
+            </p>
+          </div>
 
-    <div class="scope-matrix">
-      <article class="scope-card">
-        <div class="scope-card-head">
-          <div aria-hidden="true" class="scope-card-icon">
-            <img class="scope-card-icon-img" src="{{ url_for('static', filename='icons/web/company.webp') }}" alt="" width="400" height="400" loading="lazy" decoding="async" />
+          <div class="scope-matrix">
+            <article class="scope-card">
+              <div class="scope-card-head">
+                <div aria-hidden="true" class="scope-card-icon">
+                  <img class="scope-card-icon-img" src="{{ url_for('static', filename='icons/web/company.webp') }}" alt="" width="400" height="400" loading="lazy" decoding="async" />
+                </div>
+              </div>
+              <h3>
+                Commercial
+                <br />
+                enterprises
+              </h3>
+              <p>
+                Principal involvement in commercial enterprises, strategic
+                initiatives and associated company interests.
+              </p>
+            </article>
+
+            <article class="scope-card">
+              <div class="scope-card-head">
+                <div aria-hidden="true" class="scope-card-icon">
+                  <img class="scope-card-icon-img" src="{{ url_for('static', filename='icons/web/continuity.webp') }}" alt="" width="400" height="400" loading="lazy" decoding="async" />
+                </div>
+              </div>
+              <h3>
+                Capital &amp;
+                <br />
+                participations
+              </h3>
+              <p>
+                Historical activity in company-related financing and proprietary
+                investment matters.
+              </p>
+            </article>
+
+            <article class="scope-card">
+              <div class="scope-card-head">
+                <div aria-hidden="true" class="scope-card-icon">
+                  <img class="scope-card-icon-img" src="{{ url_for('static', filename='icons/web/approach.webp') }}" alt="" width="400" height="400" loading="lazy" decoding="async" />
+                </div>
+              </div>
+              <h3>
+                Technology
+                <br />
+                &amp; systems
+              </h3>
+              <p>
+                Experience in developing custom information systems and
+                operational tools.
+              </p>
+            </article>
+
+            <article class="scope-card">
+              <div class="scope-card-head">
+                <div aria-hidden="true" class="scope-card-icon">
+                  <img class="scope-card-icon-img" src="{{ url_for('static', filename='icons/web/governance.webp') }}" alt="" width="400" height="400" loading="lazy" decoding="async" />
+                </div>
+              </div>
+              <h3>
+                Corporate
+                <br />
+                oversight
+              </h3>
+              <p>
+                Administration, coordination, project management and support
+                for selected business interests.
+              </p>
+            </article>
           </div>
         </div>
-        <h3>
-          Commercial
-          <br />
-          enterprises
-        </h3>
-        <p>
-          Principal involvement in commercial enterprises, strategic
-          initiatives and associated company interests.
-        </p>
-      </article>
+      </section>
 
-      <article class="scope-card">
-        <div class="scope-card-head">
-          <div aria-hidden="true" class="scope-card-icon">
-            <img class="scope-card-icon-img" src="{{ url_for('static', filename='icons/web/continuity.webp') }}" alt="" width="400" height="400" loading="lazy" decoding="async" />
-          </div>
-        </div>
-        <h3>
-          Capital &amp;
-          <br />
-          participations
-        </h3>
-        <p>
-          Historical activity in company-related financing and proprietary
-          investment matters.
-        </p>
-      </article>
-
-      <article class="scope-card">
-        <div class="scope-card-head">
-          <div aria-hidden="true" class="scope-card-icon">
-            <img class="scope-card-icon-img" src="{{ url_for('static', filename='icons/web/approach.webp') }}" alt="" width="400" height="400" loading="lazy" decoding="async" />
-          </div>
-        </div>
-        <h3>
-          Technology
-          <br />
-          &amp; systems
-        </h3>
-        <p>
-          Experience in developing custom information systems and
-          operational tools.
-        </p>
-      </article>
-
-      <article class="scope-card">
-        <div class="scope-card-head">
-          <div aria-hidden="true" class="scope-card-icon">
-            <img class="scope-card-icon-img" src="{{ url_for('static', filename='icons/web/governance.webp') }}" alt="" width="400" height="400" loading="lazy" decoding="async" />
-          </div>
-        </div>
-        <h3>
-          Corporate
-          <br />
-          oversight
-        </h3>
-        <p>
-          Administration, coordination, project management and support
-          for selected business interests.
-        </p>
-      </article>
-    </div>
-  </div>
-</section>
-
-
+  
 
       <!-- 04 / OUR APPROACH -->
       <section class="section principles has-bg has-bg--left" id="approach">
@@ -256,7 +261,7 @@ For us, continuity means maintaining a clear purpose while allowing time for tho
         />
         <div class="wrap">
           <div class="principles-heading">
-            
+         
             <div class="label">04 / The Simogro approach</div>
             <h2>
               Built on judgement.
@@ -306,15 +311,19 @@ For us, continuity means maintaining a clear purpose while allowing time for tho
 
       <!-- 05 / GOVERNANCE & DISCLOSURE (UPDATED SPLIT LAYOUT) -->
       <section class="section governance" id="governance">
-        <div class="wrap governance-grid split-media-grid split-media--right">
-          <div class="split-copy">
-            
+        <div class="wrap">
+          <div class="section-heading">
+           
             <div class="label label-line">05 / Governance &amp; disclosure</div>
             <h2>
               Private in practice.
               <br />
               <em>Clear in purpose.</em>
             </h2>
+          </div>
+
+          <div class="governance-grid split-media-grid split-media--right">
+          <div class="split-copy">
             <div class="governance-copy">
               <p>
                 Simogro's internal approach emphasises defined responsibilities,
@@ -347,6 +356,7 @@ The content of this website does not constitute an offer or invitation to invest
               src="{{ url_for('static', filename='assets/fdsf.jpg') }}"
             />
           </figure>
+          </div>
         </div>
       </section>
 
