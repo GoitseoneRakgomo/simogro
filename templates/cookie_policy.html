@@ -12,19 +12,19 @@
 {% endblock %}
 
 {% block content %}
-  <header class="mast policy-mast">
+ <header class="mast policy-mast">
     <a aria-label="Simogro home" class="brand" href="{{ url_for('home') }}#top">
       <span class="brand-fallback" style="display: flex">
         <img
           alt=""
-          src="{{ url_for('static', filename='assets/simogro-crest-preview.png') }}"
+          src="{{ url_for('static', filename='assets/logo-primary.png') }}"
         />
-        <strong class="brand-word">SIMOGRO</strong>
-        <small class="brand-sub">AD ASTRA PER ASPERA SILENTIO ET IMPETU</small>
+       
       </span>
     </a>
     <a class="top-contact" href="{{ url_for('home') }}">Back to home</a>
   </header>
+
 
   <main>
     <section aria-label="Cookie Policy" class="hero policy-hero" id="top">
@@ -46,9 +46,7 @@
             similar technologies on its website, the types of cookies we may
             use, and how you can manage your preferences.
           </p>
-          <a class="link-under" href="#policy-content">
-            Read Cookie Policy
-          </a>
+        
         </div>
         <div class="hero-bottom">
           <span>Privately owned</span>
