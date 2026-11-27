@@ -1306,3 +1306,430 @@ button,
 .brand-fallback {
   align-items: flex-start;
 }
+/* =====================================================================
+   BRAND ICONS (public/static/icons/web/*.webp)
+   ===================================================================== */
+
+/* Section-level icon sitting above each section heading */
+.section-icon {
+  display: block;
+  width: clamp(68px, 6.5vw, 96px);
+  height: clamp(68px, 6.5vw, 96px);
+  margin: 0 0 26px;
+}
+.section-icon-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Centred headings: Our focus + Approach */
+.activities-sidebar .section-icon,
+.principles-heading .section-icon {
+  margin-inline: auto;
+}
+
+/* Principle cards: let the artwork stand on its own (no ring behind it) */
+.principles .principle-icon {
+  width: 64px;
+  height: 64px;
+  margin-bottom: 22px;
+  border: 0;
+  border-radius: 0;
+  background: none;
+}
+.principle-icon .principle-icon-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.principles .principle:hover .principle-icon {
+  border: 0;
+  background: none;
+  transform: scale(1.08);
+}
+
+@media (max-width: 720px) {
+  .section-icon { width: 64px; height: 64px; margin-bottom: 20px; }
+  .principles .principle-icon { width: 54px; height: 54px; margin-bottom: 18px; }
+}
+
+/* Focus cards: brand icon + centred heading */
+.scope-matrix .scope-card-head {
+  justify-content: center;
+}
+.scope-matrix .scope-card-icon {
+  width: 64px;
+  height: 64px;
+  flex: 0 0 64px;
+  border: 0;
+  border-radius: 0;
+  background: none;
+}
+.scope-card-icon .scope-card-icon-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.scope-matrix .scope-card:hover .scope-card-icon {
+  border: 0;
+  background: none;
+  transform: scale(1.08);
+}
+.scope-matrix .scope-card h3 {
+  text-align: center;
+}
+
+/* =====================================================================
+   UNIFIED SECTION HEADINGS
+   Centred, one line, at the top of every section (matches Contact).
+   ===================================================================== */
+:root {
+  --section-heading-size: clamp(1.15rem, 2.5vw, 3rem);
+}
+
+/* Heading block that sits above a section's content */
+.section-heading {
+  text-align: center;
+  margin: 0 auto clamp(40px, 5vw, 68px);
+}
+.section-heading .section-icon {
+  margin-inline: auto;
+}
+.section-heading .label-line {
+  justify-content: center;
+}
+
+/* Every section heading: same size, centred, single line */
+.section-heading h2,
+.activities-sidebar h2,
+.principles-heading h2,
+.contact-header h2,
+.split-image h2 {
+  font-size: var(--section-heading-size) !important;
+  line-height: 1.12;
+  text-align: center;
+  white-space: nowrap;
+  margin-top: 0;
+  margin-inline: auto;
+  max-width: none;
+}
+.section-heading h2 br,
+.activities-sidebar h2 br,
+.principles-heading h2 br,
+.contact-header h2 br,
+.split-image h2 br {
+  display: none;
+}
+.section-heading h2 em,
+.activities-sidebar h2 em,
+.principles-heading h2 em,
+.contact-header h2 em,
+.split-image h2 em {
+  display: inline;
+}
+
+/* Full-width image band: centre its heading too */
+.split-image-inner {
+  text-align: center;
+}
+.split-image-inner .label-line {
+  justify-content: center;
+}
+
+/* Phones: a single line would be unreadably small, so allow wrapping */
+@media (max-width: 640px) {
+  .section-heading h2,
+  .activities-sidebar h2,
+  .principles-heading h2,
+  .contact-header h2,
+  .split-image h2 {
+    font-size: clamp(1.5rem, 7vw, 2rem) !important;
+    white-space: normal;
+  }
+}
+
+/* =====================================================================
+   CARD ICONS + HEADINGS: CENTRED (Approach principles + Our focus cards)
+   Desktop icons are 10% smaller (64px -> 58px)
+   ===================================================================== */
+
+/* --- Approach: principle cards ------------------------------------- */
+.principles .principle-icon {
+  display: block;
+  width: 58px;
+  height: 58px;
+  margin: 0 auto 22px;          /* auto side margins = centred */
+  border: 0;
+  border-radius: 0;
+  background: none;
+}
+.principles .principle h3 {
+  text-align: center;
+}
+
+/* --- Our focus: scope cards ---------------------------------------- */
+.scope-matrix .scope-card-head {
+  display: flex;
+  justify-content: center;
+}
+.scope-matrix .scope-card-icon {
+  width: 58px;
+  height: 58px;
+  flex: 0 0 58px;
+  margin: 0 auto;
+  border: 0;
+  border-radius: 0;
+  background: none;
+}
+.scope-matrix .scope-card h3 {
+  text-align: center;
+}
+
+/* --- Shared: image fills its frame --------------------------------- */
+.principle-icon-img,
+.scope-card-icon-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* --- Mobile: keep the larger icon size, still centred -------------- */
+@media (max-width: 720px) {
+  .principles .principle-icon {
+    width: 54px;
+    height: 54px;
+    margin: 0 auto 18px;
+  }
+  .scope-matrix .scope-card-icon {
+    width: 64px;
+    height: 64px;
+    flex: 0 0 64px;
+  }
+  .principles .principle h3,
+  .scope-matrix .scope-card h3 {
+    text-align: center;
+  }
+}
+/* Focus cards: let the paragraph use the full card width */
+.scope-matrix .scope-card p {
+  max-width: none;
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+/* Right padding matches the left, so the text sits evenly in the card */
+.scope-matrix .scope-card {
+  padding-left: clamp(20px, 2.2vw, 32px);
+  padding-right: clamp(20px, 2.2vw, 32px);
+}
+/* =====================================================================
+   HEADINGS +20%  /  REDUCED SECTION TOP PADDING
+   ===================================================================== */
+
+/* Section headings (centred, one line) */
+:root {
+  --section-heading-size: clamp(1.38rem, 3vw, 3.6rem);
+}
+
+/* Hero + legal headings (+20% on the shared heading size) */
+.hero h1,
+.legal-hero h1,
+.legal-text h2 {
+  font-size: calc(var(--heading-size) * 1.2) !important;
+}
+
+/* Card headings (Our focus + Approach) */
+.activities .scope-matrix .scope-card h3,
+.principles .principle h3 {
+  font-size: clamp(28.8px, 2.88vw, 40.8px) !important;
+  overflow-wrap: break-word;
+}
+.scope-matrix .scope-card {
+  padding-left: clamp(16px, 1.6vw, 24px);
+  padding-right: clamp(16px, 1.6vw, 24px);
+}
+
+/* Reduced top padding for every section */
+.section,
+.contact-section {
+  padding-top: clamp(48px, 5vw, 80px);
+}
+.split-image-inner {
+  padding-top: clamp(48px, 5vw, 80px);
+}
+
+@media (max-width: 640px) {
+  .section-heading h2,
+  .activities-sidebar h2,
+  .principles-heading h2,
+  .contact-header h2,
+  .split-image h2 {
+    font-size: clamp(1.8rem, 8.4vw, 2.4rem) !important;
+  }
+}
+
+@media (max-width: 720px) {
+  .section,
+  .contact-section {
+    padding-top: 40px;
+  }
+  .split-image-inner {
+    padding-top: 44px;
+  }
+  .activities .scope-matrix .scope-card h3,
+  .principles .principle h3 {
+    font-size: clamp(28.8px, 7vw, 32px) !important;
+  }
+}
+/* =====================================================================
+   HERO + LEGAL HEADINGS: same size as every other section heading
+   ===================================================================== */
+.hero h1,
+.legal-hero h1,
+.legal-text h2 {
+  font-size: var(--section-heading-size) !important;
+  line-height: 1.12;
+}
+
+@media (max-width: 640px) {
+  .hero h1,
+  .legal-hero h1,
+  .legal-text h2 {
+    font-size: clamp(1.8rem, 8.4vw, 2.4rem) !important;
+  }
+}
+/* =====================================================================
+   POLICY PAGES: align body content with the nav logo (left) and the
+   "Back to home" button (right)
+   ===================================================================== */
+.policy-content .wrap {
+  width: calc(100% - var(--page-gutter) - var(--page-gutter));
+  max-width: 1484px;
+  margin: 0 auto;
+  padding-inline: 0;
+}
+
+.policy-copy {
+  max-width: none;
+  margin: 0;
+}
+
+.policy-copy h2,
+.policy-copy p {
+  max-width: 900px;
+  text-align: left;
+}
+.split-image-inner .label {
+  display: flex !important;
+  justify-content: center;
+  margin: 0 0 18px;
+  font: 400 12px/1.5 var(--sans);
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+/* =====================================================================
+   SHOW ALL SECTION EYEBROWS
+   (Company, Our focus, Approach, Governance, Contact + image band)
+   ===================================================================== */
+main .section .label,
+main .split-image .label,
+main .section-heading .label,
+main .activities-sidebar .label,
+main .principles-heading .label,
+main .contact-header .label {
+  display: flex !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  width: 100%;
+  height: auto !important;
+  margin: 0 0 18px;
+  font: 400 12px/1.5 var(--sans);
+  letter-spacing: 0.26em;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+/* Remove the decorative line before the label so it centres cleanly */
+main .section .label::before,
+main .split-image .label::before {
+  content: none !important;
+}
+
+@media (max-width: 640px) {
+  main .section .label,
+  main .split-image .label {
+    font-size: 11px;
+    letter-spacing: 0.2em;
+  }
+}
+/* =====================================================================
+   ALL HEADINGS MATCH THE COMPANY HEADING
+   Same size, same casing (all caps), same spacing
+   ===================================================================== */
+.section-heading h2,
+.activities-sidebar h2,
+.principles-heading h2,
+.contact-header h2,
+.split-image h2,
+.activities .scope-matrix .scope-card h3,
+.principles .principle h3 {
+  font-size: var(--section-heading-size) !important;
+  font-weight: 400;
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+}
+
+/* Gold highlighted part keeps the exact same size and casing */
+.section-heading h2 em,
+.activities-sidebar h2 em,
+.principles-heading h2 em,
+.contact-header h2 em,
+.split-image h2 em {
+  font-size: inherit;
+  font-weight: inherit;
+  font-style: normal;
+  letter-spacing: inherit;
+  text-transform: inherit;
+}
+
+@media (max-width: 640px) {
+  .section-heading h2,
+  .activities-sidebar h2,
+  .principles-heading h2,
+  .contact-header h2,
+  .split-image h2,
+  .activities .scope-matrix .scope-card h3,
+  .principles .principle h3 {
+    font-size: clamp(1.8rem, 8.4vw, 2.4rem) !important;
+  }
+}
+/* =====================================================================
+   CARD HEADINGS: smaller than section headings
+   (Our focus cards + Approach principle cards)
+   ===================================================================== */
+.activities .scope-matrix .scope-card h3,
+.principles .principle h3 {
+  font-size: clamp(22px, 1.9vw, 32px) !important;
+  line-height: 1.15;
+  letter-spacing: 0;
+  overflow-wrap: break-word;
+}
+
+@media (max-width: 720px) {
+  .activities .scope-matrix .scope-card h3,
+  .principles .principle h3 {
+    font-size: clamp(22px, 6vw, 26px) !important;
+  }
+}
